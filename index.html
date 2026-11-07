@@ -5,57 +5,139 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>ANCESTRIA — download</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@1,500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <style>
+  /* A identidade do Ancestria: o dourado do logo (#D0B372) sobre um preto
+     quente. A pagina e' escura de proposito, nos dois temas do sistema:
+     o emblema e' dourado sobre transparente e some num fundo claro. */
   :root {
-    --preto: #121212; --grafite: #1C1C1E; --borda: #2E2E30;
-    --amarelo: #FDB813; --branco: #F5F5F7; --cinza: #9A9A9E;
-    --aviso-fundo: #3A2E0B; --aviso-texto: #F5D272;
+    --fundo: #0C0B09; --fundo-2: #15130F; --borda: #2C271D;
+    --ouro: #D0B372; --ouro-claro: #E6CC8F; --ouro-escuro: #8F7A4A;
+    --texto: #EDE7DA; --suave: #A79F8E; --apagado: #6E675A;
+    --aviso-fundo: #231D10;
   }
   * { box-sizing: border-box; }
+  html { background: var(--fundo); }
   body {
-    margin: 0; padding: 40px 20px; background: var(--preto); color: var(--branco);
-    font: 16px/1.6 "Segoe UI", system-ui, -apple-system, sans-serif;
+    margin: 0; padding: 56px 16px 40px; color: var(--texto);
+    background:
+      radial-gradient(ellipse 70% 45% at 50% 0%, rgba(208,179,114,.10), transparent 70%),
+      var(--fundo);
+    font: 16px/1.65 "Inter", "Segoe UI", system-ui, sans-serif;
   }
-  .folha { max-width: 640px; margin: 0 auto; }
-  .marca { color: var(--amarelo); font-weight: 700; letter-spacing: .18em;
-           font-size: 13px; text-transform: uppercase; }
-  h1 { font-size: 30px; margin: 8px 0 4px; line-height: 1.2; }
-  .sub { color: var(--cinza); margin: 0 0 28px; }
-  .fio { height: 2px; background: var(--amarelo); margin: 0 0 28px; }
+  .folha { max-width: 660px; margin: 0 auto; }
+
+  /* ---- topo */
+  .topo { text-align: center; }
+  .emblema {
+    width: 170px; height: 170px; display: block; margin: 0 auto 26px;
+    filter: drop-shadow(0 0 28px rgba(208,179,114,.22));
+  }
+  h1 {
+    font-family: "Cinzel", serif; font-weight: 700; color: var(--ouro);
+    font-size: clamp(38px, 9vw, 56px); letter-spacing: .14em;
+    margin: 0; line-height: 1.1; padding-left: .14em; /* centra o espacamento */
+  }
+  .lema {
+    font-family: "Cormorant Garamond", serif; font-style: italic;
+    color: var(--ouro-claro); font-size: 21px; margin: 6px 0 0; opacity: .9;
+  }
+  .ornamento {
+    display: flex; align-items: center; gap: 14px; margin: 30px auto;
+    max-width: 320px; color: var(--ouro-escuro);
+  }
+  .ornamento::before, .ornamento::after {
+    content: ""; flex: 1; height: 1px;
+    background: linear-gradient(90deg, transparent, var(--ouro-escuro));
+  }
+  .ornamento::after { background: linear-gradient(90deg, var(--ouro-escuro), transparent); }
+  .ornamento span { width: 7px; height: 7px; transform: rotate(45deg);
+                    border: 1px solid var(--ouro); }
+  .sub { color: var(--suave); margin: 0 auto 30px; max-width: 520px; }
+
   .baixar {
-    display: inline-block; background: var(--amarelo); color: #101010;
-    font-weight: 700; font-size: 17px; text-decoration: none;
-    padding: 16px 30px; border-radius: 8px;
+    display: inline-block; text-decoration: none; color: #17130A;
+    font-family: "Cinzel", serif; font-weight: 700; font-size: 17px;
+    letter-spacing: .08em; padding: 16px 38px; border-radius: 4px;
+    background: linear-gradient(180deg, var(--ouro-claro), var(--ouro));
+    box-shadow: 0 0 0 1px rgba(230,204,143,.4), 0 8px 30px rgba(208,179,114,.18);
+    transition: transform .15s, box-shadow .15s;
   }
-  .baixar:hover { background: #FFC93C; }
-  .versao { color: var(--cinza); font-size: 14px; margin-top: 12px; }
+  .baixar:hover { transform: translateY(-1px);
+    box-shadow: 0 0 0 1px rgba(230,204,143,.6), 0 10px 36px rgba(208,179,114,.3); }
+  .baixar:focus-visible { outline: 2px solid var(--ouro-claro); outline-offset: 4px; }
+  .versao { color: var(--apagado); font-size: 14px; margin: 14px 0 0; }
+
+  /* ---- blocos */
+  h2 {
+    font-family: "Cinzel", serif; font-weight: 500; color: var(--ouro);
+    font-size: 15px; letter-spacing: .16em; text-transform: uppercase;
+    margin: 0 0 14px;
+  }
   .cartao {
-    background: var(--grafite); border: 1px solid var(--borda);
-    border-radius: 10px; padding: 20px 24px; margin: 28px 0;
+    background: var(--fundo-2); border: 1px solid var(--borda);
+    border-radius: 6px; padding: 22px 24px; margin: 22px 0;
   }
-  .cartao h2 { font-size: 16px; margin: 0 0 12px; color: var(--amarelo); }
+  .modulos { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 40px; }
+  .modulo {
+    border: 1px solid var(--borda); border-top: 2px solid var(--ouro-escuro);
+    border-radius: 6px; padding: 16px 18px; background: var(--fundo-2);
+  }
+  .modulo strong { display: block; color: var(--texto); font-weight: 600; margin-bottom: 2px; }
+  .modulo span { color: var(--suave); font-size: 14px; line-height: 1.5; }
   .aviso {
-    background: var(--aviso-fundo); color: var(--aviso-texto);
-    border-radius: 8px; padding: 16px 20px; margin: 28px 0; font-size: 15px;
+    background: var(--aviso-fundo); border: 1px solid #4A3D1F;
+    border-left: 3px solid var(--ouro); border-radius: 6px;
+    padding: 16px 20px; margin: 22px 0; font-size: 15px; color: #E9DDBF;
   }
+  .aviso strong { color: var(--ouro-claro); }
   ol, ul { padding-left: 22px; margin: 0; }
   li { margin: 7px 0; }
-  code { background: #0D0D0D; padding: 2px 7px; border-radius: 4px; font-size: 14px; }
-  footer { color: #6A6A6E; font-size: 13px; margin-top: 40px;
-           border-top: 1px solid var(--borda); padding-top: 20px; }
+  li::marker { color: var(--ouro); }
+  strong { font-weight: 600; }
+  footer {
+    color: var(--apagado); font-size: 13px; margin-top: 44px; text-align: center;
+    border-top: 1px solid var(--borda); padding-top: 22px;
+  }
+
+  @media (max-width: 520px) {
+    body { padding-top: 40px; }
+    .emblema { width: 130px; height: 130px; }
+    .modulos { grid-template-columns: 1fr; }
+    .baixar { display: block; }
+    .cartao { padding: 18px; }
+  }
 </style>
 </head>
 <body>
 <div class="folha">
 
-  <div class="marca">ANCESTRIA — Sabedoria antiga, tecnologia inteligente</div>
-  <h1>ANCESTRIA</h1>
-  <p class="sub">Compatibilidades, fotos dos anúncios e de carros (pelo bot), envio de fotos e vídeos para o Mercado Livre — num programa só.</p>
-  <div class="fio"></div>
+  <header class="topo">
+    <img class="emblema" src="emblema.png" alt="Emblema do Ancestria">
+    <h1>ANCESTRIA</h1>
+    <p class="lema">Sabedoria antiga, tecnologia inteligente</p>
+    <div class="ornamento"><span></span></div>
+    <p class="sub">Compatibilidades, fotos dos anúncios e de carros, envio de fotos
+      e vídeos para o Mercado Livre — tudo num programa só.</p>
 
-  <a class="baixar" id="baixar"
-     href="https://github.com/minantiii/ancestria-download/releases/latest/download/ANCESTRIA.exe">Baixar o programa</a>
-  <p class="versao">Windows · versão <span id="versao">—</span> · <span id="tamanho">—</span></p>
+    <a class="baixar" id="baixar"
+       href="https://github.com/minantiii/ancestria-download/releases/latest/download/ANCESTRIA.exe">Baixar o programa</a>
+    <p class="versao">Windows · versão <span id="versao">—</span> · <span id="tamanho">—</span></p>
+  </header>
+
+  <div class="modulos">
+    <div class="modulo"><strong>Compatibilidades</strong>
+      <span>Inserir, exportar e associar compatibilidades de autopeças.</span></div>
+    <div class="modulo"><strong>Fotos dos anúncios</strong>
+      <span>O bot escreve e desenha as imagens no ChatGPT e no Gemini.</span></div>
+    <div class="modulo"><strong>Fotos de carros</strong>
+      <span>Fotos do veículo em várias cores, pelo Gemini.</span></div>
+    <div class="modulo"><strong>Publicação</strong>
+      <span>Envio das fotos e dos vídeos direto para os anúncios.</span></div>
+  </div>
 
   <div class="aviso">
     <strong>Na primeira vez, o Windows vai desconfiar.</strong><br>
