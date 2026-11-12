@@ -1,9 +1,9 @@
 {
-  "versao": "2.0.0",
-  "url": "https://github.com/minantiii/ancestria-download/releases/download/v2.0.0/ANCESTRIA.exe",
-  "sha256": "d3fd223238a27e5e1e972f54b4d273fae23f129accd6332c35f4681310c2e2f7",
-  "tamanho": 115968541,
-  "notas": "Primeira versão",
+  "versao": "2.0.1",
+  "url": "https://github.com/minantiii/ancestria-download/releases/download/v2.0.1/ANCESTRIA.exe",
+  "sha256": "0d1271b0335b0dd3fa8fac480b98f0050a4ce2c09fd31d6855cba94ad0230419",
+  "tamanho": 115968648,
+  "notas": "Fotos dos anúncios sem ChatGPT: o Gemini escreve os textos e desenha as imagens. Carros sempre em vermelho metálico com fundo branco.",
   "bloqueado": false,
   "mensagem": ""
 }
