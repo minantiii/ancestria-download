@@ -1,9 +1,9 @@
 {
-  "versao": "2.0.2",
-  "url": "https://github.com/minantiii/ancestria-download/releases/download/v2.0.2/ANCESTRIA.exe",
-  "sha256": "c3d770c5846217b92ed8b284a15c743b5e38a2e1f04a13805c2ee3b7e5366738",
-  "tamanho": 115973862,
-  "notas": "Fotos dos anúncios com identidade visual: fundo branco, vermelho como cor principal e textos mais variados. Corrige a etapa de textos no Gemini, que falhava no modo Flash.",
+  "versao": "2.0.3",
+  "url": "https://github.com/minantiii/ancestria-download/releases/download/v2.0.3/ANCESTRIA.exe",
+  "sha256": "ce139d4998f6ab6a052febfcbf04dad707c9812c0f4360f244d503eb84b653c3",
+  "tamanho": 115978373,
+  "notas": "Textos das fotos mais caprichados: o Gemini agora escreve uma imagem por vez, com cenas completas e sem repetir frases. Funciona com os novos modos do Gemini e se recupera sozinho quando o Gemini trava.",
   "bloqueado": false,
   "mensagem": ""
 }
